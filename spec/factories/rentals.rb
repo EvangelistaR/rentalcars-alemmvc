@@ -2,9 +2,9 @@ FactoryBot.define do
   factory :rental do
     start_date { "2019-11-13" }
     end_date { "2019-11-13" }
-    client { nil }
-    category { nil }
-    subsidiary { nil }
+    client
+    category
+    subsidiary
     status { 0 }
 
     trait :without_callbacks do
