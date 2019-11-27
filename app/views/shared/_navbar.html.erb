@@ -11,10 +11,8 @@
       <li class="nav-item">
         <%= link_to 'Home', root_path, class: 'nav-link' %>
       </li>
-      <% if user_signed_in? %>
         <%= current_user.admin_navbar %>
         <%= current_user.user_navbar %>
-      <% end %>
     </ul>
     <ul class="navbar-nav ml-auto">
       <% if user_signed_in? %>
