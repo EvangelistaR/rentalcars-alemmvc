@@ -12,41 +12,8 @@
         <%= link_to 'Home', root_path, class: 'nav-link' %>
       </li>
       <% if user_signed_in? %>
-        <% if current_user.admin? %>
-          <li class="nav-item">
-            <%= link_to 'Modelos', car_models_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Categorias', categories_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Filiais', subsidiaries_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Fabricantes', manufactures_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Configurar preços de locações', rental_prices_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Adicionais de locação', addons_path, class: 'nav-link' %>
-          </li>
-        <% elsif current_user.user? %>
-          <li class="nav-item">
-          <%= link_to 'Registrar novo carro', new_car_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Preços de locações', rental_prices_path, class: 'nav-link' %>
-          </li>
-          <%= link_to 'Clientes individuais', individual_clients_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Clientes corporativos', corporate_clients_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'Locações', rentals_path, class: 'nav-link' %>
-        </li>
-        <% end %>
+        <%= current_user.admin_navbar %>
+        <%= current_user.user_navbar %>
       <% end %>
     </ul>
     <ul class="navbar-nav ml-auto">

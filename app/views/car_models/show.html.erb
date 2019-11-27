@@ -7,6 +7,7 @@
 
   <dt class="col-sm-3">Fabricante</dt>
   <dd class="col-sm-9"><%= @car_model.manufacture.name %></dd>
+  <%=image_tag @car_model.photo, class: 'card-img-to'%>
 
   <dt class="col-sm-3">Especificação do motor</dt>
   <dd class="col-sm-9"><%= @car_model.motorization %></dd>
@@ -19,7 +20,7 @@
 
 <dt class="col-sm-3">Características</dt>
   <dd class="col-sm-9">
-    <% @car_model.car_options.split(',') do |option| %>
+    <% @car_model.car_options.each do |option| %>
       <p><%= option %></p>
     <% end %>
   </dd>
