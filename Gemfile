@@ -16,6 +16,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'draper'
+gem 'delayed_job_active_record'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

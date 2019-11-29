@@ -1,6 +1,6 @@
 class Rental < ApplicationRecord
   before_create :generate_reservation_code
-  enum status: { scheduled: 0, ongoing: 1, finalized: 2 }
+  enum status: { scheduled: 0, ongoing: 10, finalized: 15, canceled: 20 }
   belongs_to :client
   belongs_to :category
   belongs_to :subsidiary
